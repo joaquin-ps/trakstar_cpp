@@ -5,17 +5,9 @@ Minimal build of trakstar usb driver based on:
 - https://github.com/ChristophJud/ATC3DGTracker 
 - https://github.com/seanyun/trakstar_ros
 
-Dependencies: 
+## Docker Installation: 
 
-```
-sudo apt install libusb-1.0-0-dev cmake build-essential
-```
-
-Setup udev rules: 
-
-```
-cp 99-trakstar.rules /lib/udev/rules.d/99-libusb.rules
-```
+Install Docker following the [official instructions](https://docs.docker.com/engine/install/ubuntu/) and [Linux post-install](https://docs.docker.com/engine/install/linux-postinstall/).
 
 ## Runnning with 20.04 docker:
 
@@ -40,4 +32,17 @@ make -j$(nproc)
 Test trakstar: 
 ```
 ./PointATC3DG_test 
+```
+
+## Without Docker: 
+
+
+Dependencies: 
+```
+sudo apt install libusb-1.0-0-dev cmake build-essential
+```
+
+Setup udev rules: 
+```
+cp 99-trakstar.rules /lib/udev/rules.d/99-libusb.rules
 ```
