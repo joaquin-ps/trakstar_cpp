@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-CONTAINER_NAME=trakstar_20.04
-IMAGE_NAME=trakstar_20.04:latest
+CONTAINER_NAME=trakstar_22.04
+IMAGE_NAME=trakstar_22.04:latest
 
 # Check if image exists: 
 if ! docker image inspect $IMAGE_NAME > /dev/null 2>&1; then
